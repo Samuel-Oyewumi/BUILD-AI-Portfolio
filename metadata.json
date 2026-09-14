@@ -1,0 +1,6 @@
+{
+  "name": "Samuel's Portfolio",
+  "description": "A beautiful portfolio showcasing projects deployed on Vercel and a client intake form.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Merriweather", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-display: "Black Ops One", ui-sans-serif, system-ui, sans-serif;
+  --color-tech-bg: #0A0A0F;
+  --color-tech-card: #15151D;
+  --color-tech-primary: #7C6FF0;
+  --color-tech-accent: #D4A537;
+  --color-tech-highlight: #B8BCC8;
+  --color-tech-text: #F7F7FA;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  overflow-x: hidden;
+}
+
+body {
+  @apply bg-tech-bg text-tech-text antialiased selection:bg-tech-primary/30 selection:text-tech-text;
+  overflow-x: hidden;
+}
+
