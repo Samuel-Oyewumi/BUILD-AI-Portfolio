@@ -1,7 +1,33 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
 import { projects } from '../data';
 import { ExternalLink } from 'lucide-react';
 import TiltCard from './TiltCard';
+
+function ProjectCardImage({ src, alt, isPriority }: { src: string; alt: string; isPriority?: boolean }) {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  return (
+    <div className="relative h-64 overflow-hidden bg-tech-bg/80">
+      <div 
+        className={`absolute inset-0 bg-gradient-to-r from-tech-card via-tech-highlight/5 to-tech-card transition-opacity duration-700 ${
+          isLoaded ? 'opacity-0 pointer-events-none' : 'opacity-100 animate-pulse'
+        }`} 
+      />
+      <img 
+        src={src} 
+        alt={alt} 
+        loading={isPriority ? "eager" : "lazy"}
+        decoding="async"
+        fetchPriority={isPriority ? "high" : "auto"}
+        onLoad={() => setIsLoaded(true)}
+        className={`w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-105 ${
+          isLoaded ? 'opacity-100 blur-0 scale-100' : 'opacity-0 blur-sm scale-95'
+        }`}
+      />
+    </div>
+  );
+}
 
 export default function Work() {
   return (
@@ -31,14 +57,11 @@ export default function Work() {
             >
               <TiltCard className="h-full">
                 <div className="group flex flex-col h-full bg-tech-card border border-tech-highlight/20 shadow-sm rounded-3xl overflow-hidden hover:shadow-[0_20px_40px_-15px_rgba(124,111,240,0.15)] hover:border-tech-primary transition-all duration-300">
-                  <div className="relative h-64 overflow-hidden bg-tech-bg">
-                    <img 
-                      src={project.imageUrl} 
-                      alt={project.title} 
-                      className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                      loading="lazy"
-                    />
-                  </div>
+                  <ProjectCardImage 
+                    src={project.imageUrl} 
+                    alt={project.title} 
+                    isPriority={index === 0}
+                  />
                   
                   <div className="p-8 flex flex-col flex-grow">
                     <h3 className="text-xl font-display font-semibold text-tech-text mb-3 group-hover:text-tech-primary transition-colors">

@@ -1,7 +1,7 @@
 import { Project, Service } from './types';
-import godsOwnImage from './assets/gods-own.png';
-import asoNovaImage from './assets/aso-nova.png';
-import timstarsImage from './assets/timstars.png';
+import godsOwnImage from './assets/gods-own.webp';
+import asoNovaImage from './assets/aso-nova.webp';
+import timstarsImage from './assets/timstars.webp';
 
 export const projects: Project[] = [
   {

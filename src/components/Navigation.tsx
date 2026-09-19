@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
-import logoImage from '../assets/logo.png';
+import logoImage from '../assets/logo.webp';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,6 +34,9 @@ export default function Navigation() {
               src={logoImage} 
               alt="BUILD AI Logo" 
               className="h-10 md:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105 rounded-md" 
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
             />
             <span className="font-display font-semibold tracking-wide text-xl md:text-2xl">BUILD AI</span>
           </a>

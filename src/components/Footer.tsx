@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Logo from './Logo';
-import logoImage from '../assets/logo.png';
+import logoImage from '../assets/logo.webp';
 
 export default function Footer() {
 
@@ -14,6 +14,8 @@ export default function Footer() {
                 src={logoImage} 
                 alt="BUILD AI Logo" 
                 className="h-10 md:h-11 w-auto object-contain rounded-md" 
+                loading="lazy"
+                decoding="async"
               />
               <span className="text-tech-text font-display font-semibold tracking-wide text-xl md:text-2xl">BUILD AI</span>
             </div>

@@ -1,6 +1,6 @@
 {
-  "name": "Samuel's Portfolio",
-  "description": "A beautiful portfolio showcasing projects deployed on Vercel and a client intake form.",
+  "name": "Build-AI-portfolio",
+  "description": "A showcase portfolio for Build AI featuring intelligent systems, client projects, and project intake.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
