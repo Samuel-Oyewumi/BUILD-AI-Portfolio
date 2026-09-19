@@ -8,7 +8,7 @@ export default function Hero() {
   const opacity = useTransform(scrollY, [0, 500], [1, 0]);
 
   return (
-    <section id="home" className="relative min-h-screen flex flex-col items-center justify-start overflow-hidden pt-32 pb-10 bg-tech-bg">
+    <section id="home" className="relative min-h-screen flex flex-col items-center justify-start overflow-hidden pt-24 md:pt-28 pb-10 bg-tech-bg">
       {/* Animated glowing orbs in background with parallax */}
       <motion.div 
         style={{ y: y1 }}
@@ -19,7 +19,7 @@ export default function Hero() {
         className="absolute bottom-[-10%] right-[-5%] w-[60%] h-[600px] bg-tech-accent/5 rounded-full blur-[120px] pointer-events-none will-change-transform" 
       />
 
-      <motion.div style={{ opacity }} className="relative z-10 max-w-6xl mx-auto px-6 w-full flex flex-col items-center text-center mt-12 md:mt-24">
+      <motion.div style={{ opacity }} className="relative z-10 max-w-6xl mx-auto px-6 w-full flex flex-col items-center text-center mt-4 md:mt-6">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}

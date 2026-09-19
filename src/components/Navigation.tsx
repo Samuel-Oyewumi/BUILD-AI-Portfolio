@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
-import logoImage from '../assets/images/logo_1783892336686.jpg';
+import logoImage from '../assets/logo.png';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,13 +29,13 @@ export default function Navigation() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          <a href="#home" className="flex items-center gap-3 group shrink-0">
+          <a href="#home" className="flex items-center gap-3.5 group shrink-0">
             <img 
               src={logoImage} 
               alt="BUILD AI Logo" 
-              className="w-8 h-8 object-contain transition-transform duration-300 group-hover:scale-110" 
+              className="h-10 md:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105 rounded-md" 
             />
-            <span className="font-display font-semibold tracking-wide text-xl">BUILD AI</span>
+            <span className="font-display font-semibold tracking-wide text-xl md:text-2xl">BUILD AI</span>
           </a>
           
           <div className={`hidden md:flex items-center gap-10 text-xs font-bold tracking-widest uppercase transition-colors duration-500 ${isScrolled ? 'text-tech-highlight' : 'text-tech-text'}`}>

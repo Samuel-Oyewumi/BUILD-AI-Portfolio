@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Logo from './Logo';
-import logoImage from '../assets/images/logo_1783892336686.jpg';
+import logoImage from '../assets/logo.png';
 
 export default function Footer() {
 
@@ -9,13 +9,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
           <div>
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center gap-3.5 mb-6">
               <img 
                 src={logoImage} 
                 alt="BUILD AI Logo" 
-                className="w-8 h-8 object-contain" 
+                className="h-10 md:h-11 w-auto object-contain rounded-md" 
               />
-              <span className="text-tech-text font-display font-semibold tracking-wide text-xl">BUILD AI</span>
+              <span className="text-tech-text font-display font-semibold tracking-wide text-xl md:text-2xl">BUILD AI</span>
             </div>
             <p className="text-tech-highlight max-w-sm mb-6 leading-relaxed font-light">
               AI-powered systems for businesses, built to scale, attract, and convert.
